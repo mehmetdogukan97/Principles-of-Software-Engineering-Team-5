@@ -33,4 +33,12 @@
         <Button text="Create New Tree"></Button>
     </HBox>
 
+    <SplitPane prefHeight="100000">
+        <VBox>
+            <TreeView prefHeight="100000" fx:id="familyTree" layoutX="0" layoutY="0"></TreeView>
+        </VBox>
+
+
+    </SplitPane>
+
 </VBox>
