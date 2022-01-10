@@ -1,15 +1,16 @@
 package com.company;
+
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
-
-import java.awt.event.ActionEvent;
-import java.io.IOException;
+import java.io.*;
+import javafx.event.ActionEvent;
 
 public class Controller {
+
     @FXML
     private Button addRelative;
 
