@@ -83,6 +83,11 @@
                 <Label text="Post Code:" style="-fx-padding: 10 0 0 0"></Label>
                 <TextField fx:id="postcode"></TextField>
 
+                <HBox style="-fx-padding: 10 0 0 0" spacing="15">
+                    <Button text="Save"></Button>
+                    <Button fx:id="addRelative" text="Add Relative" ></Button>
+                </HBox>
+
 
 
             </VBox>
