@@ -87,14 +87,10 @@
                     <Button text="Save"></Button>
                     <Button fx:id="addRelative" text="Add Relative" ></Button>
                 </HBox>
-
-
-
             </VBox>
-
         </ScrollPane>
-
-
     </SplitPane>
-
+    <HBox>
+        <Label fx:id="statusBar" style="-fx-padding: 2 2 2 2" text="Status"></Label>
+    </HBox>
 </VBox>
