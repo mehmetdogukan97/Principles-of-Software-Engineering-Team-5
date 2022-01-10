@@ -65,8 +65,19 @@
                 <Label text="Biography" style="-fx-padding: 10 0 0 0"></Label>
                 <TextArea fx:id="textArea"></TextArea>
 
-                <Label text="Date of Birth: "></Label>
+                <Label text="Date of Birth: " style="-fx-padding: 10 0 0 0"></Label>
                 <DatePicker fx:id="datePicker"></DatePicker>
+
+                <Label text="Address" style="-fx-padding: 20 0 0 0">
+                    <font>
+                        <Font name="Verdana" size="15.0"></Font>
+                    </font>
+                </Label>
+
+                <Label text="Street Name: " style="-fx-padding: 10 0 0 0"></Label>
+                <TextField fx:id="streetName"></TextField>
+
+
 
             </VBox>
 
