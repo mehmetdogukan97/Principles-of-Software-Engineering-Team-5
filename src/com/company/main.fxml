@@ -27,4 +27,10 @@
     </Label>
     <Label text="Select an option to get started." style="-fx-padding: 0 0 0 10"></Label>
 
+    <HBox style="-fx-padding: 10 10 10 10" spacing="15">
+        <Button text="Load Tree"></Button>
+        <Button text="Save Tree"></Button>
+        <Button text="Create New Tree"></Button>
+    </HBox>
+
 </VBox>
