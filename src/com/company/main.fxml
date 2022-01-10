@@ -5,6 +5,7 @@
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
 
 <VBox xmlns:fx="http://javafx.com/fxml" >
     <MenuBar>
@@ -18,4 +19,12 @@
             <MenuItem text="Family Tree Help"></MenuItem>
         </Menu>
     </MenuBar>
+
+    <Label fx:id="lblMain" text="Welcome to the Family Tree App!" style="-fx-padding: 10 10 10 10;">
+        <font>
+            <Font name="Verdana" size="20.0"></Font>
+        </font>
+    </Label>
+    <Label text="Select an option to get started." style="-fx-padding: 0 0 0 10"></Label>
+
 </VBox>
