@@ -50,8 +50,17 @@
                 <TextField fx:id="fName"></TextField>
                 <Label text="Last Name: " style="-fx-padding: 10 0 0 0"></Label>
                 <TextField fx:id="lName"></TextField>
-                <Label text="Last name after marriage:"  style="-fx-padding: 10 0 0 0"></Label>
+                <Label text="Last name after marriage: "  style="-fx-padding: 10 0 0 0"></Label>
                 <TextField fx:id="lNameAfter" style="-fx-padding: 10 0 0 0"></TextField>
+                <Label text="Gender: " style="-fx-padding: 10 0 0 0"></Label>
+                <HBox>
+                    <fx:define>
+                        <ToggleGroup fx:id="gender">
+                        </ToggleGroup>
+                    </fx:define>
+                    <RadioButton fx:id="male" style="-fx-padding: 10 0 10 0" toggleGroup="$gender" text="Male"></RadioButton>
+                    <RadioButton fx:id="female" style="-fx-padding: 10 0 10 10" toggleGroup="$gender" text="Female"></RadioButton>
+                </HBox>
 
             </VBox>
 
