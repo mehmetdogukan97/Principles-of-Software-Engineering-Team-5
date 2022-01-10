@@ -38,6 +38,25 @@
             <TreeView prefHeight="100000" fx:id="familyTree" layoutX="0" layoutY="0"></TreeView>
         </VBox>
 
+        <ScrollPane fitToWidth="true">
+            <VBox style="-fx-padding: 10 10 10 10">
+                <Label text="Person Information">
+                    <font>
+                        <Font size="26"></Font>
+                    </font>
+                </Label>
+
+                <Label text="First Name: " style="-fx-padding: 10 0 0 0"></Label>
+                <TextField fx:id="fName"></TextField>
+                <Label text="Last Name: " style="-fx-padding: 10 0 0 0"></Label>
+                <TextField fx:id="lName"></TextField>
+                <Label text="Last name after marriage:"  style="-fx-padding: 10 0 0 0"></Label>
+                <TextField fx:id="lNameAfter" style="-fx-padding: 10 0 0 0"></TextField>
+
+            </VBox>
+
+        </ScrollPane>
+
 
     </SplitPane>
 
