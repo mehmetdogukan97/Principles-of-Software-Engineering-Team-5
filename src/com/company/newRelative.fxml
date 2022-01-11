@@ -6,10 +6,18 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import javafx.collections.FXCollections?>
 <ScrollPane xmlns:fx="http://javafx.com/fxml" fitToWidth="true">
     <VBox style="-fx-padding: 10 10 10 10">
         <Label text="Type of Relative:"></Label>
         <ComboBox fx:id="comboRel">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Child"/>
+                    <String fx:value="Parent"/>
+                    <String fx:value="Spouse"/>
+                </FXCollections>
+            </items>
         </ComboBox>
     </VBox>
 </ScrollPane>
