@@ -9,5 +9,7 @@
 <ScrollPane xmlns:fx="http://javafx.com/fxml" fitToWidth="true">
     <VBox style="-fx-padding: 10 10 10 10">
         <Label text="Type of Relative:"></Label>
+        <ComboBox fx:id="comboRel">
+        </ComboBox>
     </VBox>
 </ScrollPane>
