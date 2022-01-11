@@ -7,6 +7,8 @@
 <?import javafx.scene.layout.*?>
 
 <?import javafx.collections.FXCollections?>
+<?import javafx.scene.text.Font?>
+<?import java.awt.Font?>
 <ScrollPane xmlns:fx="http://javafx.com/fxml" fitToWidth="true">
     <VBox style="-fx-padding: 10 10 10 10">
         <Label text="Type of Relative:"></Label>
@@ -19,5 +21,13 @@
                 </FXCollections>
             </items>
         </ComboBox>
+        <Label text="Person Information" style="-fx-padding: 10 10 10 10;">
+        </Label>
+        <Label text="First name:" style="-fx-padding: 10 0 0 0"></Label>
+        <TextField fx:id="newfName"></TextField>
+        <Label text="Last name:" style="-fx-padding: 10 0 0 0"></Label>
+        <TextField fx:id="newlName"></TextField>
+        <Label text="Last name after marriage:"  style="-fx-padding: 10 0 0 0"></Label>
+        <TextField fx:id="newlNameAfter" style="-fx-padding: 10 0 0 0"></TextField>
     </VBox>
 </ScrollPane>
