@@ -8,7 +8,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class Main extends Application {
+public class main extends Application {
 
     public static String APPNAME = "Family Tree Application";
 
