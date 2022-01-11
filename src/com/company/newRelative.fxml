@@ -6,9 +6,8 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.company.Controller"
-            prefHeight="400.0" prefWidth="600.0">
-
-</AnchorPane>
+<ScrollPane xmlns:fx="http://javafx.com/fxml" fitToWidth="true">
+    <VBox style="-fx-padding: 10 10 10 10">
+        <Label text="Type of Relative:"></Label>
+    </VBox>
+</ScrollPane>
