@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.text.Font?>
+<ScrollPane xmlns:fx="http://javafx.com/fxml" fitToWidth="true">
+    <VBox style="-fx-padding: 10 10 10 10">
+        <Label text="Type of Relative:"><Font size="60.0"></Font></Label>
+        <Label text="Person Information ">
+            <Font size="26.0"></Font>
+        </Label>
+    </VBox>
+</ScrollPane>
