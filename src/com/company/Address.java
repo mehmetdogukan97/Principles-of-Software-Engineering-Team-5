@@ -3,54 +3,45 @@ package com.company;
 import java.io.Serializable;
 
 public class Address implements Serializable {
-    private int number = 0;
     private String street = "N/A";
-    private String suburbs = "N/A";
-    private int postcode = 0;
+    private String district = "N/A";
+    private String city = "N/A";
+    private String country = "N/A";
 
-    Address ( int number, String street, String suburbs, int postcode){
-        this.number = number;
+    Address ( String street, String district, String city, String country){
         this.street = street;
-        this.suburbs = suburbs;
-        this.postcode = postcode;
+        this.district = district;
+        this.city = city;
+        this.country = country;
     }
 
     Address(){ }
 
-    public int getNumber(){
-        return number;
-    }
     public String getStreet(){
         return street;
     }
-    public String getSuburbs(){
-        return suburbs;
+    public String getDistrict(){
+        return district;
     }
-    public int getPostcode(){
-        return postcode;
+    public String getCity(){
+        return city;
+    }
+    public String getCountry(){
+        return country;
     }
 
-    public void setNumber(int number){
-        this.number = number;
-    }
     public void setStreet(String street){
         this.street = street;
     }
-    public void setSuburbs(String suburbs){
-        this.suburbs = suburbs;
+    public void setDistrict(String suburbs){
+        this.district = district;
     }
-    public void setPostcode(int postcode){
-        this.postcode = postcode;
-    }
+    public void setCity(String city){
 
-    public static boolean isEqual(Address a1, Address a2){
-        if (a1.getNumber() == a2.getNumber()
-                && a1.getPostcode() == a2.getPostcode()
-                && a1.getStreet().equals(a2.getStreet())
-                && a1.getSuburbs().equals(a2.getSuburbs())) {
-            return true;
-        } else {
-            return false;
-        }
+        this.city = city;
+    }
+    public void setCountry(String country){
+
+        this.country = country;
     }
 }
