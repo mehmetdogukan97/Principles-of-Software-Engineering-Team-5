@@ -65,8 +65,10 @@
                 <Label text="Biography" style="-fx-padding: 10 0 0 0"></Label>
                 <TextArea fx:id="textArea" maxWidth="500" maxHeight="80"></TextArea>
 
-                <Label text="Date of Birth: " style="-fx-padding: 10 0 0 0"></Label>
-                <DatePicker fx:id="datePicker"></DatePicker>
+                <Label text="Date of Birth: "  style="-fx-padding: 10 0 0 0"></Label>
+                <TextField fx:id="datePicker" style="-fx-padding: 10 0 0 0"></TextField>
+
+
 
                 <Label text="Address" style="-fx-padding: 20 0 0 0">
                     <font>
