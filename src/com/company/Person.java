@@ -16,6 +16,7 @@ public class Person implements Serializable {
     private Person[] parents = new Person[MAX_PARENTS];
     private ArrayList<Person> children = new ArrayList<Person>();
     private Person spouse;
+    private String date = "";
 
     public String getFname() {
         return fname;
@@ -98,6 +99,13 @@ public class Person implements Serializable {
         this.spouse = spouse;
     }
 
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getDate() {
+        return date;
+    }
 
 
     public static boolean isEqual(Person p1, Person p2) {
@@ -132,6 +140,10 @@ public class Person implements Serializable {
     public String toString() {
         return fname;
     }
+
+
+
+
 }
 
 
