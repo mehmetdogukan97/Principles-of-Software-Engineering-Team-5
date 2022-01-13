@@ -63,7 +63,7 @@
                 </HBox>
 
                 <Label text="Biography" style="-fx-padding: 10 0 0 0"></Label>
-                <TextArea fx:id="textArea"></TextArea>
+                <TextArea fx:id="textArea" maxWidth="500" maxHeight="80"></TextArea>
 
                 <Label text="Date of Birth: " style="-fx-padding: 10 0 0 0"></Label>
                 <DatePicker fx:id="datePicker"></DatePicker>
@@ -90,7 +90,4 @@
             </VBox>
         </ScrollPane>
     </SplitPane>
-    <HBox>
-        <Label fx:id="statusBar" style="-fx-padding: 2 2 2 2" text="Status"></Label>
-    </HBox>
 </VBox>
