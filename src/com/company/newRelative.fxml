@@ -41,8 +41,8 @@
         <TextArea fx:id="newTextArea"></TextArea>
 
 
-        <Label text="Date Of Birth" style="-fx-padding: 20 0 0 0"></Label>
-        <DatePicker fx:id="datePicker2"/>
+        <Label text="Date of Birth: "  style="-fx-padding: 10 0 0 0"></Label>
+        <TextField fx:id="datePicker2" style="-fx-padding: 10 0 0 0"></TextField>
 
         <Label text="Street Name: " style="-fx-padding: 10 0 0 0"></Label>
         <TextField fx:id="newStreetName"></TextField>
