@@ -31,6 +31,10 @@ public class Controller {
     @FXML
     private TextField lNameAfter;
     @FXML
+    private TextField datePicker;
+    @FXML
+    private TextField datePicker2;
+    @FXML
     private TextArea textArea;
     @FXML
     private RadioButton male;
@@ -50,7 +54,6 @@ public class Controller {
         if (familyTree.getRoot() != null) {
             familyTree.setRoot(null);
         }
-
         rootPerson = new Person();
         rootPerson.setFname("Root Person");
         populateTree(rootPerson, familyTree.getRoot());
@@ -137,6 +140,7 @@ public class Controller {
         lName.setText(selected.getLname());
         lNameAfter.setText(selected.getLnameAfter());
         textArea.setText(selected.getBio());
+        datePicker.setText(selected.getDate());
         if (selected.getGender().equals(Person.MALE)) {
             male.setSelected(true);
             female.setSelected(false);
