@@ -8,11 +8,17 @@
 
 <?import javafx.collections.FXCollections?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 <ScrollPane xmlns:fx="http://javafx.com/fxml" fitToWidth="true">
     <VBox style="-fx-padding: 10 10 10 10">
-        <Label text="Type of Relative:"><Font size="60.0"></Font></Label>
-        <Label text="Person Information ">
-            <Font size="26.0"></Font>
+        <Label text="Information "  maxWidth="500" maxHeight="500">
+            <font>
+                <Font size="26.0"></Font>
+
+            </font>
         </Label>
+        <Text  style="-fx-padding: 40 0 0 0" wrappingWidth="590" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."></Text>
+
+
     </VBox>
 </ScrollPane>
