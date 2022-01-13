@@ -51,9 +51,11 @@
         <Label text="City" style="-fx-padding: 10 0 0 0"></Label>
         <TextField fx:id="newCity"></TextField>
         <Label text="Country" style="-fx-padding: 10 0 0 0"></Label>
-        <TextField fx:id="newCountry"></TextField>
+        <TextField fx:id="newCountry" ></TextField>
 
-
+        <HBox style="-fx-padding: 10 0 0 0" spacing="15">
+            <Button fx:id="newRelativeAdd" text="Add Relative" ></Button>
+        </HBox>
 
 
     </VBox>
