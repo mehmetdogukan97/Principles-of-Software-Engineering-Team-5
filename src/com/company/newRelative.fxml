@@ -37,6 +37,13 @@
             <RadioButton fx:id="newmale" style="-fx-padding: 10 0 10 0" toggleGroup="$newgender" text="Male"></RadioButton>
             <RadioButton fx:id="newfemale" style="-fx-padding: 10 0 10 10" toggleGroup="$newgender" text="Female"></RadioButton>
         </HBox>
+        <Label text="Biography:" style="-fx-padding: 10 0 0 0"></Label>
+        <TextArea fx:id="newTextArea"></TextArea>
+
+
+        <Label text="Date Of Birth" style="-fx-padding: 20 0 0 0"></Label>
+        <DatePicker fx:id="datePicker2"/>
+
 
     </VBox>
 </ScrollPane>
