@@ -10,7 +10,7 @@
 <VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.company.Controller" >
     <MenuBar>
         <Menu text="File">
-            <MenuItem text="New Tree"></MenuItem>
+            <MenuItem text="New Tree" onAction="#handleNew"></MenuItem>
             <MenuItem text="Open Tree"></MenuItem>
             <MenuItem text="Save Tree"></MenuItem>
             <MenuItem text="Exit"></MenuItem>
@@ -30,7 +30,7 @@
     <HBox style="-fx-padding: 10 10 10 10" spacing="15">
         <Button text="Load Tree"></Button>
         <Button text="Save Tree"></Button>
-        <Button text="Create New Tree"></Button>
+        <Button text="Create New Tree" onAction="#handleNew"></Button>
     </HBox>
 
     <SplitPane prefHeight="100000">
