@@ -76,12 +76,12 @@
 
                 <Label text="Street Name: " style="-fx-padding: 10 0 0 0"></Label>
                 <TextField fx:id="streetName"></TextField>
-                <Label text="Street Number: " style="-fx-padding: 10 0 0 0"></Label>
-                <TextField fx:id="streetNum"></TextField>
-                <Label text="Suburb:" style="-fx-padding: 10 0 0 0"></Label>
-                <TextField fx:id="suburb"></TextField>
-                <Label text="Post Code:" style="-fx-padding: 10 0 0 0"></Label>
-                <TextField fx:id="postcode"></TextField>
+                <Label text="District " style="-fx-padding: 10 0 0 0"></Label>
+                <TextField fx:id="district"></TextField>
+                <Label text="City" style="-fx-padding: 10 0 0 0"></Label>
+                <TextField fx:id="city"></TextField>
+                <Label text="Country" style="-fx-padding: 10 0 0 0"></Label>
+                <TextField fx:id="country"></TextField>
 
                 <HBox style="-fx-padding: 10 0 0 0" spacing="15">
                     <Button text="Save"></Button>
