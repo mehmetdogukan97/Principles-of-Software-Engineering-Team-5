@@ -17,6 +17,7 @@ import javafx.event.ActionEvent;
 public class Controller {
 
     private Person selected;
+    private Person rootPerson;
 
     @FXML
     private Button addRelative;
@@ -44,6 +45,16 @@ public class Controller {
     @FXML
     private TextField country;
 
+    @FXML
+    private void handleNew() {
+        if (familyTree.getRoot() != null) {
+            familyTree.setRoot(null);
+        }
+
+        rootPerson = new Person();
+        rootPerson.setFname("Root Person");
+        populateTree(rootPerson, familyTree.getRoot());
+    }
 
     @FXML
     private void handleAddRelative(ActionEvent event) {
