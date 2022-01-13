@@ -45,16 +45,16 @@ public class Person implements Serializable {
     public String getGender() {
         return gender;
     }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
     public void addChild(Person child) {
         children.add(child);
     }
+
     public void addSpouse(Person spouse) {
         this.spouse = spouse;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
 
@@ -124,7 +124,6 @@ public class Person implements Serializable {
         }
         return false;
     }
-
 
     public static boolean isEqual(Person p1, Person p2) {
         boolean flag = false;
