@@ -29,5 +29,14 @@
         <TextField fx:id="newlName"></TextField>
         <Label text="Last name after marriage:"  style="-fx-padding: 10 0 0 0"></Label>
         <TextField fx:id="newlNameAfter" style="-fx-padding: 10 0 0 0"></TextField>
+        <Label text="Gender:"></Label>
+        <HBox>
+            <fx:define>
+                <ToggleGroup fx:id="newgender" />
+            </fx:define>
+            <RadioButton fx:id="newmale" style="-fx-padding: 10 0 10 0" toggleGroup="$newgender" text="Male"></RadioButton>
+            <RadioButton fx:id="newfemale" style="-fx-padding: 10 0 10 10" toggleGroup="$newgender" text="Female"></RadioButton>
+        </HBox>
+
     </VBox>
 </ScrollPane>
