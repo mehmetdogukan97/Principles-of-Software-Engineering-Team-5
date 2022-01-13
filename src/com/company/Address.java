@@ -15,8 +15,6 @@ public class Address implements Serializable {
         this.country = country;
     }
 
-    Address(){ }
-
     public String getStreet(){
         return street;
     }
@@ -33,15 +31,13 @@ public class Address implements Serializable {
     public void setStreet(String street){
         this.street = street;
     }
-    public void setDistrict(String suburbs){
+    public void setDistrict(String district){
         this.district = district;
     }
     public void setCity(String city){
-
         this.city = city;
     }
     public void setCountry(String country){
-
         this.country = country;
     }
 }
