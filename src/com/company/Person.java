@@ -50,6 +50,14 @@ public class Person implements Serializable {
         this.gender = gender;
     }
 
+    public void addChild(Person child) {
+        children.add(child);
+    }
+    public void addSpouse(Person spouse) {
+        this.spouse = spouse;
+    }
+
+
     public String getBio() {
         return bio;
     }
@@ -105,6 +113,16 @@ public class Person implements Serializable {
 
     public String getDate() {
         return date;
+    }
+
+    public boolean addParent(Person parent) {
+        for (int i = 0; i < MAX_PARENTS; i++) {
+            if (parents[i] == null) {
+                parents[i] = parent;
+                return true;
+            }
+        }
+        return false;
     }
 
 
