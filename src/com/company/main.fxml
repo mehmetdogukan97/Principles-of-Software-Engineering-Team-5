@@ -16,7 +16,7 @@
             <MenuItem text="Exit"></MenuItem>
         </Menu>
         <Menu text="Help">
-            <MenuItem text="Family Tree Help"></MenuItem>
+            <MenuItem text="Family Tree Help" onAction="#handleHelp"></MenuItem>
         </Menu>
     </MenuBar>
 
