@@ -9,15 +9,41 @@ import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+
 import java.io.*;
+
 import javafx.event.ActionEvent;
 
 public class Controller {
+
+    private Person selected;
 
     @FXML
     private Button addRelative;
     @FXML
     private TreeView<Person> familyTree;
+
+    @FXML
+    private TextField fName;
+    @FXML
+    private TextField lName;
+    @FXML
+    private TextField lNameAfter;
+    @FXML
+    private TextArea textArea;
+    @FXML
+    private RadioButton male;
+    @FXML
+    private RadioButton female;
+    @FXML
+    private TextField street;
+    @FXML
+    private TextField district;
+    @FXML
+    private TextField city;
+    @FXML
+    private TextField country;
+
 
     @FXML
     private void handleAddRelative(ActionEvent event) {
@@ -54,7 +80,7 @@ public class Controller {
         }
     }
 
-    public void populateTree(Person root, TreeItem parent) { //
+    public void populateTree(Person root, TreeItem parent) {
 
         String imagePath = "";
         if (root.getGender() == Person.MALE) {
@@ -95,5 +121,23 @@ public class Controller {
         }
     }
 
+    public void populatePersonInfo() {
+        fName.setText(selected.getFname());
+        lName.setText(selected.getLname());
+        lNameAfter.setText(selected.getLnameAfter());
+        textArea.setText(selected.getBio());
+        if (selected.getGender().equals(Person.MALE)) {
+            male.setSelected(true);
+            female.setSelected(false);
+        } else {
+            male.setSelected(false);
+            female.setSelected(true);
+        }
+
+        street.setText(selected.getAddress().getStreet());
+        district.setText(selected.getAddress().getDistrict());
+        city.setText(selected.getAddress().getCity());
+        country.setText(selected.getAddress().getCountry());
+    }
 }
 
