@@ -54,7 +54,7 @@
         <TextField fx:id="newCountry" ></TextField>
 
         <HBox style="-fx-padding: 10 0 0 0" spacing="15">
-            <Button fx:id="newRelativeAdd" text="Add Relative" ></Button>
+            <Button fx:id="newRelativeAdd" text="Add Relative" onAction="#handleNewRelative"></Button>
         </HBox>
 
 

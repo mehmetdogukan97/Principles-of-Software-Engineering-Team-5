@@ -48,6 +48,20 @@ public class Controller {
     private TextField city;
     @FXML
     private TextField country;
+    @FXML
+    private ComboBox<String> comboRel;
+    @FXML
+    private TextField newfName;
+    @FXML
+    private TextField newlName;
+    @FXML
+    private TextField newlNameAfter;
+    @FXML
+    private RadioButton newmale;
+    @FXML
+    private RadioButton newfemale;
+    @FXML
+    private TextArea newTextArea;
 
     @FXML
     private void handleNew() {
@@ -92,6 +106,66 @@ public class Controller {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @FXML
+    private void handleNewRelative() {
+        String dialogMsg = "";
+
+        Person tempPerson = new Person();
+        tempPerson.setFname(newfName.getText());
+        tempPerson.setLname(newlName.getText());
+        tempPerson.setLnameAfter(newlNameAfter.getText());
+        tempPerson.setDate(datePicker2.getText());
+        if (newmale.isSelected()) {
+            tempPerson.setGender(Person.MALE);
+        } else {
+            tempPerson.setGender(Person.FEMALE);
+        }
+        tempPerson.setBio(newTextArea.getText());
+        String tmp = comboRel.getValue();
+
+        switch (tmp) {
+            case "Parent":
+                boolean can = selected.addParent(tempPerson);
+                if (!can) {
+                    dialogMsg = "Only two parents allowed";
+                } else {
+                    dialogMsg = "Parent added.";
+                }
+                break;
+            case "Child":
+                selected.addChild(tempPerson);
+
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Notification");
+                alert.setHeaderText("Your Action is..");
+                alert.setContentText("A child was added successfully.");
+                alert.showAndWait();
+
+                dialogMsg = "Child added";
+                break;
+            case "Spouse":
+                selected.addSpouse(tempPerson);
+                dialogMsg = "Spouse added";
+                break;
+        }
+
+        repopulateTree();
+        familyTree.refresh();
+
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Hey!");
+        alert.setHeaderText(null);
+        alert.setContentText(dialogMsg);
+        alert.showAndWait();
+
+        Stage stage = (Stage) newlName.getScene().getWindow();
+        stage.close();
+    }
+
+    public void repopulateTree() {
+        populateTree(rootPerson, null);
     }
 
     public void populateTree(Person root, TreeItem parent) {
