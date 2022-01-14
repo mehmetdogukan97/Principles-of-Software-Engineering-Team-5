@@ -11,14 +11,13 @@
 <?import javafx.scene.text.Text?>
 <ScrollPane xmlns:fx="http://javafx.com/fxml" fitToWidth="true">
     <VBox style="-fx-padding: 10 10 10 10">
-        <Label text="Information "  maxWidth="500" maxHeight="500">
+        <Label text="Help "  maxWidth="500" maxHeight="500">
             <font>
                 <Font size="26.0"></Font>
 
             </font>
         </Label>
-        <Text  style="-fx-padding: 40 0 0 0" wrappingWidth="590" text="Family Tree Application is used in desktop and does not require to download any other software other than setup file. The application shall be used after reading the README documentation."></Text>
-        <Text  style="-fx-padding: 20 0 0 0" wrappingWidth="590" text="The program runs after clicking the application's shortcut and the homepage opens. An option should be selected before starting. After adding root person by clicking the 'Create New Tree' button, relative can be added. To add relative, new window will be opened."></Text>
+        <Text  style="-fx-padding: 40 0 0 0" wrappingWidth="590" text="Hello, it is a Family Tree Application that we can manage our family information. Firstly, when we run our application, we have to create our family with the create new tree button. Then, click on the root person and edit the person information at the right side of the application. The user can save his/her information when he/she clicks on the save information button. The user can also add relatives, thanks to the add relative button. So, when user clicks on the add relative button, user will see a new screen that contains relative inputs. At the combo box, the user can select relative type. Relative types are child, parent and spouse.  When he/she fills these inputs and clicks add relative button, relative information would be saved and added to the tree. That button will return the main screen of the application. Then, user can click on tree and see the relations of the relatives. The user can also click on relatives at the tree, and can add relatives to them. Also, this application contains load and save buttons next to the create new tree button. Save tree saves the current tree at the application. Open tree opens the previous saved trees. At the top left, a menubar called File consists of new tree, open tree, save tree and exit menu items. When user clicks on new tree or create new tree an empty tree will be created."></Text>
 
     </VBox>
 </ScrollPane>
