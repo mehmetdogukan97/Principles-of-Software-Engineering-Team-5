@@ -11,9 +11,9 @@
     <MenuBar>
         <Menu text="File">
             <MenuItem text="New Tree" onAction="#handleNew"></MenuItem>
-            <MenuItem text="Open Tree"></MenuItem>
-            <MenuItem text="Save Tree"></MenuItem>
-            <MenuItem text="Exit"></MenuItem>
+            <MenuItem text="Open Tree" onAction="#handleOpen"></MenuItem>
+            <MenuItem text="Save Tree" onAction="#handleSave"></MenuItem>
+            <MenuItem text="Exit" onAction="#handleSave"></MenuItem>
         </Menu>
         <Menu text="Help">
             <MenuItem text="Family Tree Help" onAction="#handleHelp"></MenuItem>
@@ -28,8 +28,8 @@
     <Label text="Select an option to get started." style="-fx-padding: 0 0 0 10"></Label>
 
     <HBox style="-fx-padding: 10 10 10 10" spacing="15">
-        <Button text="Load Tree"></Button>
-        <Button text="Save Tree"></Button>
+        <Button text="Load Tree" onAction="#handleOpen"></Button>
+        <Button text="Save Tree" onAction="#handleSave"></Button>
         <Button text="Create New Tree" onAction="#handleNew"></Button>
     </HBox>
 
@@ -92,4 +92,7 @@
             </VBox>
         </ScrollPane>
     </SplitPane>
+    <HBox>
+        <Label fx:id="statusBar" style="-fx-padding: 2 2 2 2" text="Status..."></Label>
+    </HBox>
 </VBox>
