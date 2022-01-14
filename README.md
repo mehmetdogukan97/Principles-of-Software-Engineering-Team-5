@@ -21,6 +21,10 @@ The program runs after clicking the application's shortcut and the homepage open
 
 ![relativeWindow](https://user-images.githubusercontent.com/77413853/149319712-1df1877f-9cc6-4ca8-a5cf-cb80c5a10121.png)
 
+This is an example of how the application works;
+
+![Tree](https://user-images.githubusercontent.com/77413853/149433869-e7305126-a04e-4134-880c-4e2f79185b1b.JPG)
+
 ## Contributors
 
 For design and development;
