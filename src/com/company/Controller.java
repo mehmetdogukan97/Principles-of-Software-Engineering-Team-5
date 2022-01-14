@@ -71,6 +71,7 @@ public class Controller {
         rootPerson = new Person();
         rootPerson.setFname("Root Person");
         populateTree(rootPerson, familyTree.getRoot());
+        handleTreeItemClick();
     }
 
     @FXML
@@ -105,6 +106,28 @@ public class Controller {
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    public void handleTreeItemClick() {
+        familyTree.setOnMouseClicked(null);
+        if (familyTree != null) {
+            familyTree.setOnMouseClicked(event -> {
+                if (event.getClickCount() == 1) {
+                    try {
+                        if (familyTree.getSelectionModel().getSelectedItem().getValue() != null) {
+                            try {
+                                Person item = (Person) familyTree.getSelectionModel().getSelectedItem().getValue();
+                                selected = item;
+                                populatePersonInfo();
+                            } catch (Exception e) {
+
+                            }
+                        }
+                    } catch (Exception e) {
+                    }
+                }
+            });
         }
     }
 
