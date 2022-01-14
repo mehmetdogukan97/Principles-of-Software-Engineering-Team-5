@@ -47,6 +47,9 @@ Alternatively you can clone recursively, this will download all the submodules i
 Here is the source file of the application:
 https://drive.google.com/drive/folders/1jwcDurw21IhSz-Ee_dFcAdWwyyOvEM2Q?usp=sharing
 
+Here is the setup file of the application: 
+https://drive.google.com/file/d/1HE1bj8g8hhItJc7SNDuXqfZhcX6YDI1s/view?usp=sharing
+
 
   
 ## Support
