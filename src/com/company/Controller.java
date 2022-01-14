@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 import java.io.*;
@@ -27,6 +28,8 @@ public class Controller {
     private TextField fName;
     @FXML
     private TextField lName;
+    @FXML
+    private Label statusBar;
     @FXML
     private TextField lNameAfter;
     @FXML
@@ -72,6 +75,71 @@ public class Controller {
         rootPerson.setFname("Root Person");
         populateTree(rootPerson, familyTree.getRoot());
         handleTreeItemClick();
+    }
+
+    @FXML
+    private void handleOpen() {
+        statusBar.setText("Opening Tree");
+        FileChooser fc = new FileChooser();
+        FileChooser.ExtensionFilter extFilter
+                = new FileChooser.ExtensionFilter("Tree", "*.tree");
+        File file = fc.showOpenDialog(statusBar.getScene().getWindow());
+        if (file != null) {
+            loadPerson(file);
+        }
+    }
+
+    @FXML
+    private void handleSave() {
+        FileChooser fc = new FileChooser();
+        FileChooser.ExtensionFilter extFilter
+                = new FileChooser.ExtensionFilter("Tree", "*.tree");
+        File file = fc.showSaveDialog(statusBar.getScene().getWindow());
+        if (file != null) {
+            saveTree(rootPerson, file);
+        }
+    }
+
+    @FXML
+    private void handleExit() {
+        statusBar.setText("Exiting...");
+        System.exit(1);
+    }
+
+    public void saveTree(Person person, File file) {
+        try (FileOutputStream fos = new FileOutputStream(file);
+             ObjectOutputStream oos = new ObjectOutputStream(fos)) {
+            oos.writeObject(person);
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    public void loadPerson(File file) {
+        try (FileInputStream fis = new FileInputStream(file);
+             ObjectInputStream ois = new ObjectInputStream(fis)) {
+            Object obj = ois.readObject();
+            if (obj instanceof Person) {
+                rootPerson = (Person) obj;
+                repopulateTree();
+                handleTreeItemClick();
+            }
+        } catch (IOException ex) {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error");
+            alert.setHeaderText("Action couldn't proceed!");
+            alert.setContentText("Couldn't Load File!");
+            alert.showAndWait();
+            ex.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error");
+            alert.setHeaderText("Action couldn't proceed!");
+            alert.setContentText("Couldn't Load File!");
+            alert.showAndWait();
+            e.printStackTrace();
+        }
+
     }
 
     @FXML
