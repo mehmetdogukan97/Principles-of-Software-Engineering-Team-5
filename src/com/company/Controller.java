@@ -15,7 +15,6 @@ import java.io.*;
 import javafx.event.ActionEvent;
 
 public class Controller {
-    //test
     private Person selected;
     private Person rootPerson;
 
@@ -63,6 +62,7 @@ public class Controller {
     @FXML
     private TextArea newTextArea;
 
+
     @FXML
     private void handleNew() {
         if (familyTree.getRoot() != null) {
@@ -108,6 +108,25 @@ public class Controller {
             e.printStackTrace();
         }
     }
+
+
+    @FXML
+    private void handleEditDetails() {
+        selected.setFname(fName.getText());
+        selected.setLname(lName.getText());
+        selected.setLnameAfter(lNameAfter.getText());
+        selected.setBio(textArea.getText());
+        selected.setDate(datePicker.getText());
+
+        if (male.isSelected()) {
+            selected.setGender(Person.MALE);
+        } else {
+            selected.setGender(Person.FEMALE);
+        }
+
+        familyTree.refresh();
+    }
+
 
     public void handleTreeItemClick() {
         familyTree.setOnMouseClicked(null);
@@ -251,5 +270,6 @@ public class Controller {
         city.setText(selected.getAddress().getCity());
         country.setText(selected.getAddress().getCountry());
     }
+
 }
 
